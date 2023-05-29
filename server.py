@@ -12,7 +12,7 @@ def add():
     first = request.form.get('first')
     second = request.form.get('second')
 
-    response = jsonify( {'result' : int(first) + int(second)} )
+    response = jsonify( {'result' : int(first + second)} )
     response = make_response(response)
     response.status_code = 200
     return response
@@ -23,7 +23,7 @@ def subtract():
     first = request.form.get('first')
     second = request.form.get('second')
 
-    response = jsonify( {'result' : int(first) - int(second)} )
+    response = jsonify( {'result' : int(first - second)} )
     response = make_response(response)
     response.status_code = 200
     return response
