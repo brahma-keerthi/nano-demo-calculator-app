@@ -15,14 +15,12 @@ def greeting():
 @app.route("/calculator/add", methods=['POST'])
 def add():
     num = request.json
-    response = Result(num['first'] + num['second'])
-    return jsonify(response)
+    return jsonify(Result(num['first'] + num['second']))
 
 @app.route("/calculator/subtract", methods=['POST'])
 def subtract():
     num = request.json
-    response = Result(num['first'] - num['second'])
-    return jsonify(response)
+    return jsonify(Result(num['first'] - num['second']))
 
 if __name__ == '__main__':
     app.run(port=8080,host='0.0.0.0')
